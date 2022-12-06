@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Javascript</title>
+</head>
+
+<body>
+    <h1>KUIS SINGKAT</h1>
+    <p>* Seluruh jawaban menggunakan huruf kecil ygy!</p><br>
+    <label for="">1. Apa ibu kota Banten</label><br> Jawab : <input type="text" id="ibukota"><br>
+    <div id="ibukota_response"></div>
+    <label for="">2. kependekan dari universitas diponegoro</label><br> Jawab : <input type="text" id="undip"><br>
+    <div id="undip_response"></div><br>
+    <button onclick="cek_jawaban()">KIRIM</button>
+
+    <script>
+        function cek_jawaban() {
+            const ibukota = document.querySelector('#ibukota')
+            const ibukota_response = document.querySelector('#ibukota_response')
+            const undip = document.querySelector('#undip')
+            const undip_response = document.querySelector('#undip_response')
+            if (ibukota.value == "serang") {
+                ibukota_response.innerHTML = 'Jawaban Kamu Benar!'
+                ibukota_response.style = "color : green;"
+            } else {
+                ibukota_response.innerHTML = ' Jawaban Kamu Salah!'
+                ibukota_response.style = "color : red"
+            }
+            if (undip.value == 'undip') {
+                undip_response.innerHTML = 'Jawaban Kamu Benar!'
+                undip_response.style = "color : green;"
+            } else {
+                undip_response.innerHTML = ' Jawaban Kamu Salah!'
+                undip_response.style = "color : red;"
+            }
+        }
+    </script>
+</body>
+
+</html>
